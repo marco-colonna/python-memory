@@ -7,4 +7,19 @@ def intro():
 
     input('Enter any number to CONTINUE: ')
 
+def print_board():
+    print()
+
+def guess():
+    print()
+
+def check():
+    print()
+
+def won():
+    print()
+
+def main():
+    print()
+
 intro()
