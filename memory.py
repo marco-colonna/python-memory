@@ -29,3 +29,28 @@ turns = 0
 
 # print cards
 print_cards(cards, show)
+
+# get guess
+guess = 0
+while guess == 0:
+    guess = input('\nGuess a card: ')
+    # check numeric
+    if guess.isnumeric() == False:
+        print('Invalid input. Please try again.')
+        guess = 0
+        continue
+
+    guess = int(guess)
+    # check out of bounds
+    if guess < 1 or guess > 16:
+        print('Invalid input. Please try again.')
+        guess = 0
+        continue
+
+    # check already matched or chosen
+    if show[guess - 1]:
+        print('Invalid input. Please try again.')
+        guess = 0
+        continue
+else:
+    guess -= 1
