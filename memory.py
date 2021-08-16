@@ -54,3 +54,4 @@ while guess == 0:
         continue
 else:
     guess -= 1
+    show[guess] = True
