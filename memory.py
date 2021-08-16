@@ -1,6 +1,6 @@
 def print_cards(cards, show):
     print()
-
+    
     for index, card in enumerate(cards):
         if show[index] == False:
             print(' ■', end='')
@@ -9,6 +9,32 @@ def print_cards(cards, show):
 
         if (index + 1) % 4 == 0:
             print()
+
+def get_guess(show):
+    guess = 0
+    while guess == 0:
+        guess = input('\nGuess a card: ')
+        # numeric
+        if guess.isnumeric() == False:
+            print('Invalid input. Please try again.')
+            guess = 0
+            continue
+        
+        guess = int(guess)
+        # out of bounds
+        if guess < 1 or guess > 16:
+            print('Invalid input. Please try again.')
+            guess = 0
+            continue
+        
+        # already matched/chosen
+        if show[guess - 1]:
+            print('Invalid input. Please try again.')
+            guess = 0
+            continue
+    else:
+        guess -= 1
+        return guess
 
 # intro
 print('''\nWelcome to Concentration!\n
@@ -31,27 +57,5 @@ turns = 0
 print_cards(cards, show)
 
 # get guess
-guess = 0
-while guess == 0:
-    guess = input('\nGuess a card: ')
-    # check numeric
-    if guess.isnumeric() == False:
-        print('Invalid input. Please try again.')
-        guess = 0
-        continue
-
-    guess = int(guess)
-    # check out of bounds
-    if guess < 1 or guess > 16:
-        print('Invalid input. Please try again.')
-        guess = 0
-        continue
-
-    # check already matched or chosen
-    if show[guess - 1]:
-        print('Invalid input. Please try again.')
-        guess = 0
-        continue
-else:
-    guess -= 1
-    show[guess] = True
+guess1 = get_guess(show)
+show[guess1] = True
