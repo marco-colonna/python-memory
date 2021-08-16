@@ -69,3 +69,24 @@ show[guess2] = True
 
 # print cards
 print_cards(cards, show)
+
+# check guesses
+card1 = cards[guess1]
+card2 = cards[guess2]
+
+if card1 == card2:
+    print('\nMatch! :)')
+    matches += 1
+else:
+    print('\nNo match. :(')
+    show[guess1] = False
+    show[guess2] = False
+
+turns += 1
+
+reply = input('\nEnter 0 to QUIT. Enter any other number to CONTINUE: ')
+
+if reply.isnumeric():
+    if int(reply) == 0:
+        print('\nThanks for playing!\n')
+        quit()
