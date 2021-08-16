@@ -1,6 +1,6 @@
 def print_cards(cards, show):
     print()
-    
+
     for index, card in enumerate(cards):
         if show[index] == False:
             print(' ■', end='')
@@ -59,3 +59,13 @@ print_cards(cards, show)
 # get guess
 guess1 = get_guess(show)
 show[guess1] = True
+
+# print cards
+print_cards(cards, show)
+
+# get another guess
+guess2 = get_guess(show)
+show[guess2] = True
+
+# print cards
+print_cards(cards, show)
