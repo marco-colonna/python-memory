@@ -11,7 +11,7 @@ def print_cards(cards, show):
         if (index + 1) % 4 == 0:
             print() # new line
 
-def get_guess(show):
+def guess_card(show):
     guess = 0
     while guess == 0:
         guess = input('\nGuess a card: ')
@@ -59,14 +59,14 @@ while matches != 8:
     print_cards(cards, show)
 
     # get guess
-    guess1 = get_guess(show)
+    guess1 = guess_card(show)
     show[guess1] = True
 
     # print cards
     print_cards(cards, show)
 
     # get another guess
-    guess2 = get_guess(show)
+    guess2 = guess_card(show)
     show[guess2] = True
 
     # print cards
