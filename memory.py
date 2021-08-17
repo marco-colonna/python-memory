@@ -53,40 +53,44 @@ matches = 0
 # represents the number of turns
 turns = 0
 
-# print cards
-print_cards(cards, show)
+while matches != 8:
+    # print cards
+    print_cards(cards, show)
 
-# get guess
-guess1 = get_guess(show)
-show[guess1] = True
+    # get guess
+    guess1 = get_guess(show)
+    show[guess1] = True
 
-# print cards
-print_cards(cards, show)
+    # print cards
+    print_cards(cards, show)
 
-# get another guess
-guess2 = get_guess(show)
-show[guess2] = True
+    # get another guess
+    guess2 = get_guess(show)
+    show[guess2] = True
 
-# print cards
-print_cards(cards, show)
+    # print cards
+    print_cards(cards, show)
 
-# check guesses
-card1 = cards[guess1]
-card2 = cards[guess2]
+    # check guesses
+    card1 = cards[guess1]
+    card2 = cards[guess2]
 
-if card1 == card2:
-    print('\nMatch! :)')
-    matches += 1
+    if card1 == card2:
+        print('\nMatch! :)')
+        matches += 1
+    else:
+        print('\nNo match. :(')
+        show[guess1] = False
+        show[guess2] = False
+
+    turns += 1
+
+    reply = input('\nEnter 0 to QUIT. Enter any other number to CONTINUE: ')
+
+    if reply.isnumeric():
+        if int(reply) == 0:
+            print('\nThanks for playing!\n')
+            quit()
 else:
-    print('\nNo match. :(')
-    show[guess1] = False
-    show[guess2] = False
-
-turns += 1
-
-reply = input('\nEnter 0 to QUIT. Enter any other number to CONTINUE: ')
-
-if reply.isnumeric():
-    if int(reply) == 0:
-        print('\nThanks for playing!\n')
-        quit()
+    print('\nCongratulations! Well done!\n')
+    print('Number of turns:', turns, '\n')
