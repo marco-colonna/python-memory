@@ -1,4 +1,4 @@
-# print welcome screen and instructions
+# print the welcome screen and instructions
 def intro():
     print('\nWelcome to Concentration!')
     print('\nThis is a memory game in which you guess two cards.')
@@ -45,6 +45,15 @@ def guess_card(show):
         # passed all checks, valid guess
         return guess
 
+# pause before starting the next turn and allow the user to QUIT or CONTINUE playing
+def pause():
+    # get input from the user
+    reply = input('\nEnter 0 to QUIT. Enter any other number to CONTINUE: ')
+    # check if the user entered '0'
+    if reply == '0':
+        print('\nThanks for playing!\n')
+        quit()
+
 intro()
 
 # represents the face of each card
@@ -88,12 +97,7 @@ while matches != 8:
 
     turns += 1
 
-    reply = input('\nEnter 0 to QUIT. Enter any other number to CONTINUE: ')
-
-    if reply.isnumeric():
-        if int(reply) == 0:
-            print('\nThanks for playing!\n')
-            quit()
+    pause()
 else:
     print('\nCongratulations! Well done!')
     print('\nNumber of turns:', turns, '\n')
