@@ -30,10 +30,7 @@ while matches != 8:
     memory.print_cards(cards, show)
 
     # check guesses
-    card1 = cards[guess1]
-    card2 = cards[guess2]
-
-    if card1 == card2:
+    if cards[guess1] == cards[guess2]:
         print('\nMatch! :)')
         matches += 1
     else:
