@@ -1,3 +1,11 @@
+# print welcome screen and instructions
+def intro():
+    print('\nWelcome to Concentration!')
+    print('\nThis is a memory game in which you guess two cards.')
+    print('If the faces of the cards match, you win the pair')
+    print('and they remain face up. Don\'t waste a turn!')
+    input('\nEnter any number to CONTINUE: ')
+
 # print the 'cards' list based on the 'show' list
 def print_cards(cards, show):
     print()
@@ -37,13 +45,7 @@ def guess_card(show):
         # passed all checks, valid guess
         return guess
 
-# intro
-print('''\nWelcome to Concentration!\n
-This is a memory game in which you guess two cards.
-If the faces of the cards match, you win the pair
-and they remain face up. Don\'t waste a turn!''')
-
-input('\nEnter any number to CONTINUE: ')
+intro()
 
 # represents the face of each card
 cards = ['1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7', '7', '8', '8']
