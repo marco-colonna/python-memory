@@ -3,7 +3,7 @@
 import concentration
 
 # represents the face of each card
-cards = ['1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7', '7', '8', '8']
+cards = ['☺', '♦', '♥', '☼', '☻', '♫', '☺', '♣', '♠', '☼', '♫', '♥', '♣', '♦', '☻', '♠']
 # represents whether to show the face of each card
 show = [False]*16
 # represents the number of matches made
