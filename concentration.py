@@ -1,3 +1,5 @@
+# concentration.py - The functions for a game of concentration.
+
 # print the welcome screen and instructions
 def intro():
     print('\nWelcome to Concentration!')
@@ -45,7 +47,7 @@ def guess_card(show):
         # passed all checks, valid guess
         return guess
 
-# pause before starting the next turn and allow the user to QUIT or CONTINUE playing
+# pause before starting the next turn and allow the user to quit or continue playing
 def pause():
     # get input from the user
     reply = input('\nEnter 0 to QUIT. Enter any other number to CONTINUE: ')
