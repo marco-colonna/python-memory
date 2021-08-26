@@ -1,0 +1,9 @@
+include pyproject.toml
+
+include setup.fg
+
+include README.md
+
+include LICENSE
+
+include .gitignore
