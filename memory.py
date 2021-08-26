@@ -1,4 +1,4 @@
-# game.py - A game of concentration.
+# memory.py - A memory game.
 
 import concentration
 
