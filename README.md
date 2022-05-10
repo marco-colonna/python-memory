@@ -1,6 +1,6 @@
-# Concentration - Memory Game
+# python-memory - Memory Game
 
-**Concentration is a memory game written in Python, inspired by [memory-game](https://github.com/marco-colonna/memory-game).**
+**python-memory is a memory game written in Python, inspired by [memory-game](https://github.com/marco-colonna/memory-game).**
 
 ## Description
 
@@ -15,6 +15,42 @@ and they remain face up. Don't waste a turn!
 ```
 
 This program is a replication of my memory game in x86 assembly language, [memory-game](https://github.com/marco-colonna/memory-game), in Python.
+
+## Installation
+
+***Note: python-memory requires an installation of [Python 3](https://www.python.org/) on your device (preferably the latest release).***
+
+This installation will guide you on how to download, open, and run the game on a Windows device.
+
+First, click the green "Code" button located at the top of the repository page.
+
+<p align="center">
+    <img alt="Picture of the Code button" src="images/code.png">
+</p>
+
+Next, click the "Download ZIP" option located at the bottom of the dropdown.
+
+<p align="center">
+    <img alt="Picture of the Download ZIP dropdown" src="images/zip.png">
+</p>
+
+Download and save the ZIP file to your device, and then unzip (extract) the entire folder.
+
+<p align="center">
+    <img alt="Picture of the Extract All... option" src="images/unzip.png">
+</p>
+
+Locate the Python file [game.py](game.py).
+
+If you already have Python 3 installed on your device (and Python file associations are already set), then you can open and run the game by double-clicking [game.py](game.py).
+
+If Python file assocations are not set, you can open and run the game by right-clicking on [game.py](game.py), selecting "Open with", and selecting Python. If Python is not listed, select "Choose another app" and locate the installation of python.exe on your device.
+
+<p align="center">
+    <img alt="Picture of the Open with option" src="images/open.png">
+</p>
+
+You may also be able to open and run the game by opening [game.py](game.py) in an editor, such as IDLE, and running it from the editor.
 
 ## Usage
 
