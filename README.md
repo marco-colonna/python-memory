@@ -44,7 +44,7 @@ Locate the Python file [game.py](game.py).
 
 If you already have Python 3 installed on your device (and Python file associations are already set), then you can open and run the game by double-clicking [game.py](game.py).
 
-If Python file assocations are not set, you can open and run the game by right-clicking on [game.py](game.py), selecting "Open with", and selecting Python. If Python is not listed, select "Choose another app" and locate the installation of python.exe on your device.
+If Python file associations are not set, you can open and run the game by right-clicking on [game.py](game.py), selecting "Open with", and selecting Python. If Python is not listed, select "Choose another app" and locate the installation of python.exe on your device.
 
 <p align="center">
     <img alt="Picture of the Open with option" src="images/open.png">
